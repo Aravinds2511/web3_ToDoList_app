@@ -1,7 +1,6 @@
 import React, { useEffect, useState, useContext } from "react";
 import { MdVerified } from "react-icons/md";
 import { RiSendPlaneFill, RiCloseLine } from "react-icons/ri";
-import { AiFillLock, AiFillUnlock } from "react-icons/ai";
 import Image from "next/image";
 
 import { ToDoListContext } from "@/context/ToDolistApp";
@@ -32,7 +31,7 @@ const Home = () => {
   return (
     <div className={Style.home}>
       <div className={Style.navBar}>
-        <img src={Loading} alt="logo" width={50} height={50} />
+        <img src={ Loading } alt="logo" width={50} height={50} />
         <div className={Style.connect}>
           {!currentAccount ? (
             <button onClick={() => connectWallet()}>Connect Wallet</button>
@@ -80,6 +79,7 @@ const Home = () => {
               allToDoList={allToDoList}
               allAddress={allAddress}
               myList={myList}
+              change={change}
             />
           </div>
         </div>

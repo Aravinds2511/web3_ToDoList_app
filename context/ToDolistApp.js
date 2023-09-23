@@ -68,12 +68,10 @@ export const ToDoListProvider = ({ children }) => {
       //get data
       const getAllAddress = await contract.getAddress();
       setAllAddress(getAllAddress);
-      console.log(getAllAddress);
 
       getAllAddress.map(async (eL) => {
         const getSingleData = await contract.getCreatorData(eL);
-        setAllToDoList.push(getToDoList);
-        console.log(getSingleData);
+        allToDoList.push(getSingleData);
       });
 
       const allMessage = await contract.getMessage();
